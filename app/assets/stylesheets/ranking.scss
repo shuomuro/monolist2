@@ -1,3 +1,8 @@
+
+.page_titile {
+  text-align: center;
+}
+
 .ranking_items {
   margin: 10px 10px 10px 50px;
 }
@@ -10,10 +15,11 @@
  border: solid;
  border-color: lightgrey;
  border-width: 1px;
+ height: 150px;
 }
 
 .ranking_number {
-  background: grey;
+  background: cornflowerblue;
   padding: 3px;
   color: white;
   text-align: center;

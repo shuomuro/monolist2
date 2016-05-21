@@ -3,6 +3,9 @@
 <meta name="description" content="Haveの多い商品ランキングです。">
 <% end %>
 
+<div class="page_titile">
+  <h1>Haveランキング</h1>
+</div>
 <div class="container">
   <% Have.group(:item_id).order('count_all desc').limit(10).count.each.with_index(1) do |ranking, index| %>
   <% @item = Item.find(ranking[0]) %>
@@ -19,7 +22,7 @@
     <div class="item_title col-sm-9">
       <%= link_to @item.title, item_path(@item) %><br>
       Have人数：<%= ranking[1] %>人<br><br>
-      <%= link_to '楽天の商品ページへ', @item.detail_page_url, :target => "_blank" %>
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to '楽天の商品ページへ', @item.detail_page_url, :target => "_blank" %>
     </div>
   </div>
   </div>
